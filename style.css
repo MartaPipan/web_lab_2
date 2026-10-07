@@ -1,0 +1,192 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333333;
+}
+.page-container {
+  max-width: 55%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.block1,
+.block2_circuit,
+.block3_foto,
+.block4_fotogrid,
+.block5_keychain,
+footer {
+  margin-bottom: 50px;
+}
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.menu-topo {
+  background-color: #ffffff;
+  
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+.menu-container {
+  max-width: 60%;
+  margin: 0 auto;
+  padding-left: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+.menu-links a {
+  text-decoration: none;
+  color: #555555;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+.menu-links a:hover,
+.menu-links a.active {
+  color: #2832e8;
+}
+
+
+/* --- BLOCK 1 --- */
+.block1 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.radius5-image {
+  border-radius: 30px;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* --- BLOCK 2 --- */
+.block2_circuit {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 20px;
+  text-align: center;
+}
+.foto_circuit img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+}
+.foto_circuit p {
+  margin: 4px 0;
+}
+
+/* --- BLOCKS 3 & 6 --- */
+.block_texto_foto h2 {
+  font-size: 2rem;
+  margin: 0 0 5px 0;
+}
+.subtitle {
+  color: #666666;
+  margin: 0 0 20px 0;
+}
+.block_texto_foto img {
+  border-radius: 4px;
+}
+
+/* --- BLOCK 4: 6 Fotos com 5px de espaço --- */
+.grid_square {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+.grid_square img {
+  height: 200px;
+}
+
+/* --- BLOCO 5 --- */
+.block5_keychain {
+  display: flex;
+  flex-direction: row; /* Coloca a foto e o texto lado a lado */
+  gap: 25px;           /* Espaço entre a foto e o texto */
+  align-items: stretch; /* Faz os dois lados terem sempre a mesma altura */
+  width: 100%;
+}
+
+/* Aplicamos as propriedades diretamente na imagem */
+.block5_keychain img {
+  flex: 1;             /* Divide o espaço igualmente */
+  width: 50%;          /* Ocupa exatamente metade (50%) */
+  min-height: 300px;   /* Altura mínima para não achatar */
+  border-radius: 25px;
+  object-fit: cover;   /* Corta a imagem proporcionalmente sem distorcer */
+}
+
+.blue_context {
+  flex: 1;             /* Divide o espaço igualmente */
+  width: 50%;          /* Ocupa exatamente metade (50%) */
+  background-color: #f2f0fb; 
+  padding: 40px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza o texto verticalmente */
+  text-align: left;        /* Alinha o texto à esquerda */
+  box-sizing: border-box;  /* Impede que o padding aumente a largura */
+}
+
+.blue_context h2 {
+  font-size: 2.2rem;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+}
+
+.blue_context p {
+  margin: 8px 0;
+  font-size: 1.05rem;
+}
+
+
+/* --- FOOTER --- */
+footer {
+  background-color: #fdf2f2;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+footer h2 {
+  margin: 0 0 10px 0;
+}
+.form-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.form-footer input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 240px;
+}
+.form-footer button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
