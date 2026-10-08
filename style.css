@@ -13,7 +13,7 @@ body {
 
 .block1,
 .block2_circuit,
-.block3_foto,
+.block_text_foto,
 .block4_fotogrid,
 .block5_keychain,
 footer {
@@ -174,33 +174,61 @@ img {
 
 
 /* --- BLOCK 2 --- */
-.block2_circuit {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px 20px;
-  text-align: center;
+.page-container2 {
+  width: 100%;
+  background-color: #fdd8d86b;
+  padding: 60px 0;          
+  margin-bottom: 50px;
 }
+.block2_circuit {
+  max-width: 55%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px 25px;                             /* Espaço entre os círculos */
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.foto_circuit {
+  text-align: center; 
+}
+
 .foto_circuit img {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 15px auto;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
-.foto_circuit p {
-  margin: 4px 0;
+
+.foto_circuit p:not(:has(strong)) {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666666; 
 }
 
 /* --- BLOCKS 3 & 6 --- */
-.block_texto_foto h2 {
+.block_text_foto h2 {
   font-size: 2rem;
   margin: 0 0 5px 0;
 }
-.subtitle {
+.block_text_foto .subtitle {
   color: #666666;
   margin: 0 0 20px 0;
 }
-.block_texto_foto img {
-  border-radius: 4px;
+.block_text_foto .subtitle a {
+  text-decoration: none;
+}
+.block3_foto .subtitle a:hover {
+  color: #2832e8;
+}
+
+.block_text_foto img {
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
 }
 
 /* --- BLOCK 4 --- */
@@ -258,7 +286,7 @@ img {
 
 /* --- FOOTER --- */
 footer {
-  background-color: #fdf2f2;
+  background-color: #fdd8d86b;
   padding: 40px 20px;
   text-align: center;
   border-radius: 4px;
