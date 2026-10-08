@@ -34,9 +34,9 @@ img {
   margin-bottom: 30px;
 }
 .menu-container {
-  max-width: 60%;
+  max-width: 55%;
   margin: 0 auto;
-  padding-left: 35px;
+  padding-left: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,7 +52,7 @@ img {
 .menu-links a {
   text-decoration: none;
   color: #555555;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 500;
   padding-bottom: 5px;
   border-bottom: 2px solid transparent;
@@ -64,14 +64,111 @@ img {
 
 
 /* --- BLOCK 1 --- */
-.block1 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-.radius5-image {
+.block1 {
+  position: relative; 
+  width: 100%;
+  height: 70vh;
+  margin-bottom: 15vh;  
   border-radius: 30px;
-  max-width: 100%;
-  height: auto;
+  overflow: hidden;  
+}
+
+.block1 .radius5-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.block1 .inter_context {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 19, 19, 0.45); 
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.block1 h1 {
+  font-size: 3.2rem;
+  font-weight:lighter;
+  margin: 0 0 10px 0;
+}
+
+.block1 .subtitle {
+  color: #e0e0e0; 
+  font-size: 0.9rem;
+  margin: 0 0 5px 0;
+  padding-bottom: 10px;
+}
+
+.block1 .freepik {
+  margin: 0 0 25px 0;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.block1 .freepik a {
+  color: #ffffff;
+  text-decoration: none;
+    font-weight: bold;
+}
+
+.block1 .form {
+  display: flex;
+  width: 100%;
+  max-width: 380px;
+  background-color: rgba(230, 232, 238, 0.959); 
+  padding: 15px;
+  border-radius: 20px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.block1 .form input {
+  padding: 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.9); 
+  color: #333333;
+  flex: 1;
+  font-size: 0.7rem;
+  flex: 1;
+  width: 100%;
+}
+
+.block1 .form button {
+  background-color: #000000; 
+  color: #ffffff; 
+  border: none;
+  padding: 12px 30px;
+  border-radius: 20px;
+  font-weight:lighter;
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: background-color 0.2s;
+  flex-shrink: 0;  /* Impede o botão de ser esmagado ou deformado */
+}
+
+.block1 .form button:hover {
+  background-color: #222222;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 500px) {
+  .block1 .form {
+    flex-direction: column; 
+    border-radius: 15px;
+  }
+  .block1 .form button {
+    width: 100%; 
+  }
 }
 
 
@@ -106,7 +203,7 @@ img {
   border-radius: 4px;
 }
 
-/* --- BLOCK 4: 6 Fotos com 5px de espaço --- */
+/* --- BLOCK 4 --- */
 .grid_square {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -116,35 +213,35 @@ img {
   height: 200px;
 }
 
-/* --- BLOCO 5 --- */
+/* --- BLOCK 5 --- */
 .block5_keychain {
   display: flex;
-  flex-direction: row; /* Coloca a foto e o texto lado a lado */
-  gap: 25px;           /* Espaço entre a foto e o texto */
-  align-items: stretch; /* Faz os dois lados terem sempre a mesma altura */
+  flex-direction: row; 
+  gap: 25px;           
+  align-items: stretch; 
   width: 100%;
 }
 
-/* Aplicamos as propriedades diretamente na imagem */
+
 .block5_keychain img {
-  flex: 1;             /* Divide o espaço igualmente */
-  width: 50%;          /* Ocupa exatamente metade (50%) */
-  min-height: 300px;   /* Altura mínima para não achatar */
+  flex: 1;             
+  width: 50%;         
+  min-height: 300px;   
   border-radius: 25px;
-  object-fit: cover;   /* Corta a imagem proporcionalmente sem distorcer */
+  object-fit: cover;  
 }
 
 .blue_context {
-  flex: 1;             /* Divide o espaço igualmente */
-  width: 50%;          /* Ocupa exatamente metade (50%) */
+  flex: 1;             
+  width: 50%; 
   background-color: #f2f0fb; 
   padding: 40px;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza o texto verticalmente */
-  text-align: left;        /* Alinha o texto à esquerda */
-  box-sizing: border-box;  /* Impede que o padding aumente a largura */
+  justify-content: center;
+  text-align: left;  
+  box-sizing: border-box; 
 }
 
 .blue_context h2 {
@@ -190,3 +287,4 @@ footer h2 {
   font-weight: bold;
   cursor: pointer;
 }
+
