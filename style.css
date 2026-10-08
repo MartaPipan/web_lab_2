@@ -117,7 +117,7 @@ img {
 .block1 .freepik a {
   color: #ffffff;
   text-decoration: none;
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .block1 .form {
@@ -241,46 +241,94 @@ img {
   height: 200px;
 }
 
-/* --- BLOCK 5 --- */
+/* --- BLOCK 5 (Estilo com Flexbox na Lista) --- */
 .block5_keychain {
   display: flex;
-  flex-direction: row; 
-  gap: 25px;           
-  align-items: stretch; 
+  flex-direction: row; /* Coloca a foto e o texto lado a lado */
+  gap: 25px;           /* Espaço fixo de 25px entre os dois blocos */
+  align-items: stretch; /* Mantém os dois lados com a mesma altura */
   width: 100%;
 }
 
-
 .block5_keychain img {
   flex: 1;             
-  width: 50%;         
+  width: 47%;         
   min-height: 300px;   
-  border-radius: 25px;
+  border-radius: 20px; 
   object-fit: cover;  
 }
 
 .blue_context {
-  flex: 1;             
-  width: 50%; 
+  flex: 1; 
+  width: 47%;            
   background-color: #f2f0fb; 
-  padding: 40px;
-  border-radius: 25px;
+  /* 65px de espaço acima/abaixo empurra todo o bloco de conteúdo para o centro */
+  padding: 65px 50px;      
+  border-radius: 20px;       
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: left;  
-  box-sizing: border-box; 
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  text-align: left;        /* Alinha o texto à esquerda */
+  box-sizing: border-box;  
 }
 
 .blue_context h2 {
-  font-size: 2.2rem;
-  margin: 0 0 15px 0;
-  line-height: 1.2;
+  font-size: 1.8rem;         
+  font-weight: bold;
+  color: #111111;
+  margin: 0 0 12px 0;
+  line-height: 1.2;          
 }
 
-.blue_context p {
-  margin: 8px 0;
-  font-size: 1.05rem;
+.blue_context .subtitle {
+  color: #555555;
+  font-size: 0.7rem;     
+  margin: 0 0 25px 0;
+}
+
+.blue_context .list {
+  list-style: none; /* Remove a bolinha rígida padrão do navegador */
+  margin: 0;
+  padding: 0;  
+}
+
+.blue_context .list li {
+  display: flex;       
+  align-items: center;
+  font-weight: bold;         
+  color: #111111;
+  font-size: 0.7rem;
+  margin-bottom: 18px; 
+}
+
+.blue_context .list li:last-child {
+  margin-bottom: 0;
+}
+
+.blue_context .list li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;          
+  height: 6px;
+  background-color: #111111;
+  border-radius: 50%;
+  margin-right: 15px;  
+  flex-shrink: 0;      /* Garante que a bolinha nunca mude de formato */
+}
+
+.blue_context p:last-child {
+  font-size: 0.85rem;
+  color: #7f86b4;                    
+  margin: 15px 0 0 0;
+}
+
+.blue_context p:last-child a {
+  color: #727ad4;            
+  text-decoration: none;     
+}
+
+.blue_context p:last-child a:hover {
+  text-decoration: underline; 
 }
 
 
