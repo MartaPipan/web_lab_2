@@ -253,7 +253,7 @@ img {
 }
 
 .block_text_foto:last-of-type img {
-  height: 50vh;
+  height: 70vh;
   object-fit: cover;
   object-position: center;
 }
@@ -267,9 +267,9 @@ img {
 
 .grid_square img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* REGRA MÁGICA: Garante que a altura é sempre 100% igual à largura (Quadrado Perfeito) */
-  min-height: 250px; /* CORRIGIDO: Força todas as fotos a terem rigorosamente a mesma altura */
-  object-fit: cover; /* Recorta a imagem proporcionalmente para não ficar distorcida ou "esmagada" */
+  aspect-ratio: 4 / 3; 
+  min-height: 250px; 
+  object-fit: cover; 
 }
 
 @media (max-width: 768px) {
@@ -455,6 +455,7 @@ img {
   font-size: 0.7rem;
   align-items: center;
   gap: 5px;
+  flex: 1;
 }
 
 .form-footer input {
@@ -464,6 +465,8 @@ img {
   font-size: 0.7rem;
   background-color: #ffffff;
   cursor: text;
+  width: 100%;
+  box-sizing: border-box;
   transition:
     border-color 0.2s,
     background-color 0.2s;
